@@ -1,6 +1,7 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import Input from './Input'
+import { Time } from './Time';
 
 const Form = () => {
     const inputRef = useRef(null)
@@ -11,8 +12,11 @@ const Form = () => {
 
     return (
         <div> <p>
-            <input ref={inputRef} type="text" placeholder='write something' />
+            <Input ref={inputRef} type="text" placeholder='write something' />
         </p>
+            <p>
+                <Time></Time>
+            </p>
 
         </div>
     );
